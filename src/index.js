@@ -10,9 +10,21 @@ const App = function () {
 
     return (
         <div className="ui container comments">
-            <CommentDetail author="Sam" comment="Odoyle Rules!!" time={getTime()} />
-            <CommentDetail author="Alex" comment="Nope" time={getTime()} />
-            <CommentDetail author="James" comment="So childish..." time={getTime()} />
+            <CommentDetail
+                author="Sam"
+                comment="Odoyle Rules!!"
+                time={getTime()}
+                image={faker.image.avatar()} />
+            <CommentDetail
+                author="Alex"
+                comment="Nope"
+                time={getTime()}
+                image={faker.image.avatar()} />
+            <CommentDetail
+                author="James"
+                comment="So childish..."
+                time={getTime()}
+                image={faker.image.avatar()} />
         </div>
 
 
