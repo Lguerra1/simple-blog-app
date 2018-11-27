@@ -1,12 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import faker from 'faker';
+import CommentDetail from './CommentDetail';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const App = function () {
+    function getTime() {
+        return (new Date()).toLocaleTimeString()
+    }
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
+    return (
+        <div className="ui container comments">
+            <CommentDetail author="Sam" comment="Odoyle Rules!!" time={getTime()} />
+            <CommentDetail author="Alex" comment="Nope" time={getTime()} />
+            <CommentDetail author="James" comment="So childish..." time={getTime()} />
+        </div>
+
+
+    )
+};
+
+ReactDOM.render(<App />
+    , document.querySelector('#root'));
+
+
