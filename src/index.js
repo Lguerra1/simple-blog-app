@@ -13,25 +13,32 @@ const App = function () {
     return (
         <div className="ui container comments">
             <ApprovalCard>
+              <div>
+                  <h2>Hello</h2>
+              </div>
+            </ApprovalCard>
+            <ApprovalCard>
                 <CommentDetail
                     author="Sam"
                     comment="Odoyle Rules!!"
                     time={getTime()}
                     image={faker.image.avatar()} />
             </ApprovalCard>
-            <CommentDetail
-                author="Alex"
-                comment="Nope"
-                time={getTime()}
-                image={faker.image.avatar()} />
-            <CommentDetail
-                author="James"
-                comment="So childish..."
-                time={getTime()}
-                image={faker.image.avatar()} />
+            <ApprovalCard>
+                <CommentDetail
+                    author="Alex"
+                    comment="Nope"
+                    time={getTime()}
+                    image={faker.image.avatar()} />
+            </ApprovalCard>
+            <ApprovalCard>
+                <CommentDetail
+                    author="James"
+                    comment="So childish..."
+                    time={getTime()}
+                    image={faker.image.avatar()} />
+            </ApprovalCard>
         </div>
-
-
     )
 };
 
