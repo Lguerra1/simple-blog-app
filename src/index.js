@@ -2,19 +2,23 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import faker from 'faker';
 import CommentDetail from './CommentDetail';
+import ApprovalCard from './ApprovalCard';
 
 const App = function () {
-    function getTime() {
+    const getTime = function () {
         return (new Date()).toLocaleTimeString()
     }
 
+
     return (
         <div className="ui container comments">
-            <CommentDetail
-                author="Sam"
-                comment="Odoyle Rules!!"
-                time={getTime()}
-                image={faker.image.avatar()} />
+            <ApprovalCard>
+                <CommentDetail
+                    author="Sam"
+                    comment="Odoyle Rules!!"
+                    time={getTime()}
+                    image={faker.image.avatar()} />
+            </ApprovalCard>
             <CommentDetail
                 author="Alex"
                 comment="Nope"
